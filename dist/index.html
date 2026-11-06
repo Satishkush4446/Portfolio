@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#080808" />
+
+    <!-- SEO & Metadata -->
+    <title>Satish Kushwaha — Frontend Engineer & Creative UI Developer</title>
+    <meta name="description" content="Award-winning interactive portfolio of Satish Kushwaha. Frontend Engineer specializing in high-speed, accessible, and visually captivating digital experiences. 100+ websites delivered." />
+    <meta name="keywords" content="Satish Kushwaha, Frontend Engineer, UI Developer, Creative Web Developer, React, JavaScript, Performance, WCAG, WordPress, Elementor, Portfolio" />
+    <meta name="author" content="Satish Kushwaha" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://satishkushwaha.dev" />
+    <meta property="og:title" content="Satish Kushwaha — Frontend Engineer & Creative UI Developer" />
+    <meta property="og:description" content="Crafting Digital Experiences That Stand Out. 100+ Websites Delivered | 35% Faster Load Speeds | 0% Downtime Migrations." />
+    <meta property="og:image" content="/Portfolio/favicon.svg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Satish Kushwaha — Frontend Engineer" />
+    <meta name="twitter:description" content="Crafting Digital Experiences That Stand Out. Fast, accessible, and interactive." />
+
+    <!-- Google Fonts: Space Grotesk, Syne, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Theme Initialization (Prevents FOUT before React hydrates) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#F8FAFC' : '#080808');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/Portfolio/assets/index-CN9s1-FO.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-6vXjuQd_.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
