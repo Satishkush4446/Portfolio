@@ -19,6 +19,7 @@ export default function SmoothScroll({ children }) {
     });
 
     lenis.on('scroll', ScrollTrigger.update);
+    window.__lenis = lenis;
 
     const updateLenis = (time) => {
       lenis.raf(time * 1000);
@@ -28,6 +29,9 @@ export default function SmoothScroll({ children }) {
     gsap.ticker.lagSmoothing(0);
 
     return () => {
+      if (window.__lenis === lenis) {
+        delete window.__lenis;
+      }
       lenis.destroy();
       gsap.ticker.remove(updateLenis);
     };

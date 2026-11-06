@@ -307,9 +307,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.88);
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: var(--z-modal);
@@ -320,6 +323,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s var(--ease-out-expo);
+  isolation: isolate;
 }
 
 .award-lightbox-overlay.open {
@@ -334,8 +338,10 @@
   width: 100%;
   max-width: 900px;
   max-height: 92vh;
+  max-height: 92dvh;
   overflow-y: auto;
   position: relative;
+  z-index: var(--z-modal-content);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(199, 255, 77, 0.15);
   transform: scale(0.96) translateY(20px);
   transition: transform 0.4s var(--ease-out-expo);

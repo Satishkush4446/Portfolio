@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ExternalLink, CheckCircle2, ArrowRight, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { GithubIcon } from './BrandIcons';
 import { projectsData } from '../data/projects';
@@ -13,13 +14,16 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      window.__lenis?.stop();
       window.addEventListener('keydown', handleKeyDown);
     } else {
       document.body.style.overflow = '';
+      window.__lenis?.start();
     }
 
     return () => {
       document.body.style.overflow = '';
+      window.__lenis?.start();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -31,7 +35,7 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
   const nextProject = projectsData[(currentIndex + 1) % projectsData.length];
   const prevProject = projectsData[(currentIndex - 1 + projectsData.length) % projectsData.length];
 
-  return (
+  const modalContent = (
     <div
       className={`modal-overlay ${isOpen ? 'open' : ''}`}
       onClick={(e) => {
@@ -354,4 +358,6 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
       </div>
     </div>
   );
+
+  return typeof document !== 'undefined' ? createPortal(modalContent, document.body) : modalContent;
 }

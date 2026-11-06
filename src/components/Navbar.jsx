@@ -55,13 +55,16 @@ export default function Navbar() {
 
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      window.__lenis?.stop();
       window.addEventListener('keydown', handleKeyDown);
     } else {
       document.body.style.overflow = '';
+      window.__lenis?.start();
     }
 
     return () => {
       document.body.style.overflow = '';
+      window.__lenis?.start();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [mobileMenuOpen]);

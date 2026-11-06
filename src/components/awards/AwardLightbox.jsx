@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ExternalLink, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck } from 'lucide-react';
 import { LinkedinIcon } from '../BrandIcons';
 import MagneticButton from '../MagneticButton';
@@ -14,13 +15,16 @@ export default function AwardLightbox({ award, isOpen, onClose, onSelectAward })
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      window.__lenis?.stop();
       window.addEventListener('keydown', handleKeyDown);
     } else {
       document.body.style.overflow = '';
+      window.__lenis?.start();
     }
 
     return () => {
       document.body.style.overflow = '';
+      window.__lenis?.start();
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -31,7 +35,7 @@ export default function AwardLightbox({ award, isOpen, onClose, onSelectAward })
   const nextAward = awardsData[(currentIndex + 1) % awardsData.length];
   const prevAward = awardsData[(currentIndex - 1 + awardsData.length) % awardsData.length];
 
-  return (
+  const lightboxNode = (
     <div
       className={`award-lightbox-overlay ${isOpen ? 'open' : ''}`}
       onClick={(e) => {
@@ -211,4 +215,6 @@ export default function AwardLightbox({ award, isOpen, onClose, onSelectAward })
       </div>
     </div>
   );
+
+  return typeof document !== 'undefined' ? createPortal(lightboxNode, document.body) : lightboxNode;
 }

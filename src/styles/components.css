@@ -11,7 +11,7 @@
   top: 1.5rem;
   left: 0;
   width: 100%;
-  z-index: var(--z-nav);
+  z-index: calc(var(--z-drawer) + 10);
   pointer-events: none;
   display: flex;
   justify-content: center;
@@ -172,7 +172,7 @@
   background: rgba(8, 8, 8, 0.97);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  z-index: calc(var(--z-nav) - 1);
+  z-index: var(--z-drawer);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -783,11 +783,14 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: var(--z-modal);
   display: flex;
   justify-content: center;
@@ -796,6 +799,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s var(--ease-out-expo);
+  isolation: isolate;
 }
 
 .modal-overlay.open {
@@ -810,8 +814,10 @@
   width: 100%;
   max-width: 850px;
   max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   position: relative;
+  z-index: var(--z-modal-content);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(199, 255, 77, 0.15);
   transform: scale(0.95) translateY(20px);
   transition: transform 0.4s var(--ease-out-expo);
@@ -843,7 +849,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
-  z-index: 5;
+  z-index: calc(var(--z-modal-content) + 5);
 }
 
 .modal-close-btn:hover {
