@@ -123,13 +123,16 @@ export default function Projects() {
                       fontSize: '0.85rem',
                       fontWeight: 800,
                       color: project.accentColor || 'var(--accent-primary)',
-                      letterSpacing: '0.05em'
+                      letterSpacing: '0.05em',
+                      flexShrink: 0
                     }}
                   >
                     {project.number}
                   </span>
 
-                  <span className="project-category-badge">{project.category}</span>
+                  <span className="project-category-badge" title={project.category}>
+                    {project.category}
+                  </span>
                 </div>
 
                 <div style={{ position: 'relative', zIndex: 2, display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
