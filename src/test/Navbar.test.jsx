@@ -49,4 +49,37 @@ describe('Navbar Component', () => {
     fireEvent.click(mobileProjectLink);
     expect(screen.getByLabelText('Open Menu')).toBeInTheDocument();
   });
+
+  it('renders top social links (GitHub & LinkedIn) with correct target and rel attributes', () => {
+    render(<Navbar />);
+
+    const githubLinks = screen.getAllByRole('link', { name: /github/i });
+    expect(githubLinks.length).toBeGreaterThanOrEqual(1);
+    expect(githubLinks[0]).toHaveAttribute('target', '_blank');
+    expect(githubLinks[0]).toHaveAttribute('rel', 'noopener noreferrer');
+
+    const linkedinLinks = screen.getAllByRole('link', { name: /linkedin/i });
+    expect(linkedinLinks.length).toBeGreaterThanOrEqual(1);
+    expect(linkedinLinks[0]).toHaveAttribute('target', '_blank');
+    expect(linkedinLinks[0]).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('toggles theme between dark and light mode and sets data-theme on html root', () => {
+    render(<Navbar />);
+
+    // Default theme is dark
+    const themeBtn = screen.getByRole('button', { name: /switch to light mode/i });
+    expect(themeBtn).toBeInTheDocument();
+    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+
+    // Click to toggle to light mode
+    fireEvent.click(themeBtn);
+    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+    expect(screen.getByRole('button', { name: /switch to dark mode/i })).toBeInTheDocument();
+
+    // Click again to toggle back to dark mode
+    const darkBtn = screen.getByRole('button', { name: /switch to dark mode/i });
+    fireEvent.click(darkBtn);
+    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+  });
 });

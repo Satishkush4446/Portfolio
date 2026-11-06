@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, FileText } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText, Mail, Sun, Moon } from 'lucide-react';
 import MagneticButton from './MagneticButton';
-import { GithubIcon } from './BrandIcons';
+import { GithubIcon, LinkedinIcon } from './BrandIcons';
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../hooks/useTheme';
 import { profileData } from '../data/profile';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { label: 'About', href: '#about' },
@@ -104,6 +107,13 @@ export default function Navbar() {
               <span className="nav-status-text">Available</span>
             </div>
 
+            {/* Theme Toggle (Light / Dark) */}
+            <ThemeToggle
+              theme={theme}
+              toggleTheme={toggleTheme}
+              className="nav-theme-btn"
+            />
+
             {/* Resume Download Action */}
             <a
               href={profileData.resumeUrl || `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`}
@@ -114,6 +124,19 @@ export default function Navbar() {
               title="Download Resume (PDF)"
             >
               <FileText size={17} />
+            </a>
+
+            {/* LinkedIn Profile */}
+            <a
+              href={profileData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="highlight-icon-box nav-linkedin-btn"
+              style={{ width: '38px', height: '38px', borderRadius: '50%' }}
+              aria-label="LinkedIn Profile"
+              title="LinkedIn Profile"
+            >
+              <LinkedinIcon size={18} />
             </a>
 
             {/* GitHub Profile */}
@@ -172,7 +195,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+        <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '0.9rem', alignItems: 'center' }}>
+          {/* Mobile Theme Switch Button */}
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="mobile-theme-row"
+            aria-label={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+          >
+            {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+            <span>Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode</span>
+          </button>
+
           <MagneticButton
             href="#contact"
             variant="primary"
@@ -193,6 +227,18 @@ export default function Navbar() {
             <span>Download Resume (PDF)</span>
           </a>
 
+          {/* Mobile LinkedIn Link */}
+          <a
+            href={profileData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem' }}
+          >
+            <LinkedinIcon size={16} />
+            <span>LinkedIn / satishkush4446</span>
+          </a>
+
+          {/* Mobile GitHub Link */}
           <a
             href={profileData.github}
             target="_blank"
@@ -201,6 +247,15 @@ export default function Navbar() {
           >
             <GithubIcon size={16} />
             <span>GitHub / Satishkush4446</span>
+          </a>
+
+          {/* Mobile Email Link */}
+          <a
+            href={`mailto:${profileData.email}`}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.88rem' }}
+          >
+            <Mail size={16} />
+            <span>{profileData.email}</span>
           </a>
         </div>
       </div>

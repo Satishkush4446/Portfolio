@@ -75,7 +75,8 @@
 
 /* Medium Tablets & Narrow Viewports (<= 860px) */
 @media (max-width: 860px) {
-  .nav-github-btn {
+  .nav-github-btn,
+  .nav-linkedin-btn {
     display: none;
   }
 }
@@ -125,7 +126,8 @@
     display: none;
   }
 
-  .nav-github-btn {
+  .nav-github-btn,
+  .nav-linkedin-btn {
     display: none;
   }
 

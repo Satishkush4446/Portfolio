@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowUpRight, Sparkles, Code2, Zap, ShieldCheck, FileText } from 'lucide-react';
+import { ArrowUpRight, Sparkles, Code2, Zap, ShieldCheck, FileText, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '../components/BrandIcons';
 import { profileData } from '../data/profile';
 import MagneticButton from '../components/MagneticButton';
 
@@ -138,9 +139,10 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
-      tl.from('.hero-status-tag', {
+      tl.from(['.hero-status-tag', '.hero-top-socials'], {
         opacity: 0,
         y: -15,
+        stagger: 0.1,
         duration: 0.8,
         delay: 0.1
       })
@@ -196,10 +198,43 @@ export default function Hero() {
       <div className="ambient-glow ambient-glow-1" aria-hidden="true" />
 
       <div className="container hero-content">
-        {/* Availability Tag */}
-        <div className="hero-status-tag">
-          <span className="pulse-lime" />
-          <span>{profileData.availability} • {profileData.location}</span>
+        {/* Availability Tag & Quick Social Access */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+          <div className="hero-status-tag" style={{ marginBottom: 0 }}>
+            <span className="pulse-lime" />
+            <span>{profileData.availability} • {profileData.location}</span>
+          </div>
+
+          <div className="hero-top-socials" style={{ marginBottom: 0 }} aria-label="Top social profiles">
+            <a
+              href={profileData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social-pill"
+              aria-label="GitHub Profile (opens in new tab)"
+            >
+              <GithubIcon size={14} />
+              <span>GitHub</span>
+            </a>
+            <a
+              href={profileData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social-pill"
+              aria-label="LinkedIn Profile (opens in new tab)"
+            >
+              <LinkedinIcon size={14} />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href={`mailto:${profileData.email}`}
+              className="hero-social-pill"
+              aria-label={`Send email to ${profileData.email}`}
+            >
+              <Mail size={14} />
+              <span>Email</span>
+            </a>
+          </div>
         </div>
 
         {/* Oversized Name */}
