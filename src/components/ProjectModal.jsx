@@ -188,13 +188,13 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
               </div>
             )}
             <div className="modal-metric-item">
-              <div className="val" style={{ fontSize: '1.15rem', marginTop: '0.4rem', color: '#FFFFFF' }}>
+              <div className="val" style={{ fontSize: '1.15rem', marginTop: '0.4rem', color: 'var(--text-primary)' }}>
                 {project.role}
               </div>
               <div className="lbl">My Role</div>
             </div>
             <div className="modal-metric-item">
-              <div className="val" style={{ fontSize: '1.15rem', marginTop: '0.4rem', color: '#FFFFFF' }}>
+              <div className="val" style={{ fontSize: '1.15rem', marginTop: '0.4rem', color: 'var(--text-primary)' }}>
                 {project.client}
               </div>
               <div className="lbl">Organization / Client</div>
@@ -250,7 +250,7 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
               <h3 className="modal-section-title">Verified Aggregate Results (50+ Sites)</h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
                 {Object.entries(project.verifiedResults).map(([key, val]) => (
-                  <div key={key} style={{ background: 'rgba(199,255,77,0.06)', border: '1px solid var(--accent-border)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
+                  <div key={key} style={{ background: 'var(--accent-dim)', border: '1px solid var(--accent-border)', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
                     <div style={{ color: 'var(--accent-primary)', fontFamily: 'var(--font-headline)', fontWeight: 700, fontSize: '1rem' }}>
                       {val}
                     </div>

@@ -84,11 +84,12 @@ export default function Contact() {
         setFormState({ name: '', email: '', message: '' });
 
         try {
+          const isLight = document.documentElement.getAttribute('data-theme') === 'light';
           confetti({
             particleCount: 80,
             spread: 70,
             origin: { y: 0.6 },
-            colors: ['#C7FF4D', '#ffffff', '#38bdf8']
+            colors: isLight ? ['#16A34A', '#0F172A', '#38bdf8'] : ['#C7FF4D', '#ffffff', '#38bdf8']
           });
         } catch {
           // Safe fallback if confetti canvas fails

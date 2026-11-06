@@ -75,7 +75,7 @@ export default function AwardLightbox({ award, isOpen, onClose, onSelectAward })
                 fontWeight: 700,
                 padding: '0.35rem 0.9rem',
                 borderRadius: '9999px',
-                background: 'rgba(199, 255, 77, 0.08)',
+                background: 'var(--accent-dim)',
                 border: '1px solid var(--accent-border)',
                 color: award.accentColor || 'var(--accent-primary)',
                 letterSpacing: '0.05em'
@@ -192,7 +192,7 @@ export default function AwardLightbox({ award, isOpen, onClose, onSelectAward })
           </div>
 
           {/* Navigation Between The 2 Awards */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1rem', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
             <button
               type="button"
               onClick={() => onSelectAward && onSelectAward(prevAward)}

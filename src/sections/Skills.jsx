@@ -45,7 +45,7 @@ export default function Skills() {
   const getCategoryIcon = (id) => {
     switch (id) {
       case 'frontend':
-        return <Code2 size={22} style={{ color: '#C7FF4D' }} />;
+        return <Code2 size={22} style={{ color: 'var(--accent-primary)' }} />;
       case 'cms':
         return <Database size={22} style={{ color: '#60A5FA' }} />;
       case 'performance-seo':
@@ -53,11 +53,11 @@ export default function Skills() {
         return <Cpu size={22} style={{ color: '#F472B6' }} />;
       case 'ui-ux-design':
       case 'design':
-        return <Layout size={22} style={{ color: '#FBBF24' }} />;
+        return <Layout size={22} style={{ color: '#D97706' }} />;
       case 'tools':
         return <Wrench size={22} style={{ color: '#34D399' }} />;
       default:
-        return <Sparkles size={22} style={{ color: '#C7FF4D' }} />;
+        return <Sparkles size={22} style={{ color: 'var(--accent-primary)' }} />;
     }
   };
 

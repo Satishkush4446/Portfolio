@@ -62,7 +62,7 @@ export default function Achievements() {
       case 0: return <Globe size={24} style={{ color: 'var(--accent-primary)' }} />;
       case 1: return <Shield size={24} style={{ color: '#38bdf8' }} />;
       case 2: return <Zap size={24} style={{ color: '#34d399' }} />;
-      case 3: return <TrendingUp size={24} style={{ color: '#fbbf24' }} />;
+      case 3: return <TrendingUp size={24} style={{ color: '#D97706' }} />;
       case 4: return <TrendingUp size={24} style={{ color: '#f472b6' }} />;
       case 5: return <Award size={24} style={{ color: '#818cf8' }} />;
       default: return <TrendingUp size={24} style={{ color: 'var(--accent-primary)' }} />;

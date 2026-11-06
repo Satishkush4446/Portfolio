@@ -118,7 +118,7 @@ export default function Education() {
 
               <div className="edu-item-card edu-anim-card">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                  <Cpu size={18} style={{ color: '#FBBF24' }} />
+                  <Cpu size={18} style={{ color: '#D97706' }} />
                   <h4 className="edu-card-title" style={{ margin: 0 }}>Web Technologies &amp; Software Systems</h4>
                 </div>
                 <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>

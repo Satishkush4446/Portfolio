@@ -87,7 +87,7 @@ export default function Certifications() {
                 position: 'relative',
                 overflow: 'hidden',
                 transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                boxShadow: cert.isExpired ? 'none' : '0 10px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(199, 255, 77, 0.1)'
+                boxShadow: cert.isExpired ? 'none' : 'var(--shadow-md), var(--shadow-glow)'
               }}
             >
               {/* Glow Accent */}
@@ -99,7 +99,7 @@ export default function Certifications() {
                     right: '-50px',
                     width: '140px',
                     height: '140px',
-                    background: 'radial-gradient(circle, rgba(199,255,77,0.18), transparent 70%)',
+                    background: 'radial-gradient(circle, var(--accent-dim), transparent 70%)',
                     pointerEvents: 'none'
                   }}
                 />
@@ -145,8 +145,8 @@ export default function Certifications() {
                       fontWeight: 600,
                       padding: '0.25rem 0.65rem',
                       borderRadius: '9999px',
-                      background: cert.isExpired ? 'rgba(255, 255, 255, 0.05)' : 'var(--accent-dim)',
-                      border: cert.isExpired ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid var(--accent-border)',
+                      background: cert.isExpired ? 'var(--bg-surface-elevated)' : 'var(--accent-dim)',
+                      border: cert.isExpired ? '1px solid var(--border-subtle)' : '1px solid var(--accent-border)',
                       color: cert.isExpired ? 'var(--text-muted)' : 'var(--accent-primary)',
                       display: 'inline-flex',
                       alignItems: 'center',

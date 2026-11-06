@@ -20,6 +20,19 @@ export function useTheme() {
     }
   }, [theme]);
 
+  // Listen for OS theme changes if user hasn't explicitly set a preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+    const handleSystemChange = (e) => {
+      if (!localStorage.getItem('portfolio-theme')) {
+        setTheme(e.matches ? 'light' : 'dark');
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleSystemChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+  }, []);
+
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };

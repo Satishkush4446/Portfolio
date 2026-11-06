@@ -125,8 +125,8 @@
 .custom-cursor-follower.is-hovering {
   width: 64px;
   height: 64px;
-  background-color: rgba(199, 255, 77, 0.2);
-  border-color: transparent;
+  background-color: var(--accent-dim);
+  border-color: var(--accent-border);
 }
 
 .custom-cursor-follower.is-clicking {
@@ -153,7 +153,7 @@
   height: 100%;
   background: linear-gradient(90deg, #38bdf8, var(--accent-primary));
   width: 0%;
-  box-shadow: 0 0 10px rgba(199, 255, 77, 0.8);
+  box-shadow: 0 0 10px var(--accent-primary);
   transition: width 0.05s linear;
 }
 
@@ -228,7 +228,7 @@
   display: flex;
   user-select: none;
   padding: 1.25rem 0;
-  background: rgba(18, 18, 18, 0.6);
+  background: var(--bg-surface-elevated);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }

@@ -93,7 +93,7 @@ export default function Experience() {
                     justifyContent: 'space-between',
                     gap: '0.75rem',
                     padding: '0.85rem 1.25rem',
-                    background: 'rgba(199, 255, 77, 0.08)',
+                    background: 'var(--accent-dim)',
                     border: '1px solid var(--accent-border)',
                     borderRadius: 'var(--radius-md)',
                     marginBottom: '1.5rem',

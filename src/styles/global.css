@@ -296,6 +296,58 @@
 
 [data-theme="light"] .custom-cursor-follower {
   border-color: #16A34A;
+  mix-blend-mode: normal;
+  background: rgba(22, 163, 74, 0.06);
+}
+
+[data-theme="light"] .custom-cursor-follower.is-hovering {
+  background-color: rgba(22, 163, 74, 0.14);
+  border-color: var(--accent-border);
+}
+
+[data-theme="light"] .site-footer {
+  background: #FFFFFF;
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .footer-bottom-row {
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .contact-hero-wrap {
+  background: radial-gradient(circle at 50% 0%, rgba(22, 163, 74, 0.08), transparent 70%), #FFFFFF;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .contact-interactive-form {
+  background: #F8FAFC;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .awards-counter-badge {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06), 0 0 20px rgba(22, 163, 74, 0.12);
+}
+
+[data-theme="light"] .awards-experience-bridge {
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(22, 163, 74, 0.06) 100%);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .marquee-wrapper {
+  background: #F1F5F9;
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .about-code-snippet {
+  background: #0F172A;
+  border-color: rgba(15, 23, 42, 0.2);
+  color: #CBD5E1;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .edu-item-card.honored {
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(22, 163, 74, 0.06) 100%);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
 /* Lenis Recommended CSS */
@@ -348,12 +400,12 @@ body {
 /* Text Selection */
 ::selection {
   background-color: var(--accent-primary);
-  color: var(--bg-primary);
+  color: var(--text-inverse);
 }
 
 ::-moz-selection {
   background-color: var(--accent-primary);
-  color: var(--bg-primary);
+  color: var(--text-inverse);
 }
 
 /* Custom Scrollbar */
@@ -366,12 +418,27 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: var(--border-hover);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
+}
+
+/* Accessible Universal Focus Visible Ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
 }
 
 /* Layout Utilities */
