@@ -17,7 +17,7 @@ export const awardsData = [
       "Conducted complex zero-downtime CMS migrations across global client platforms",
       "Refined Core Web Vitals performance benchmarks across high-traffic properties"
     ],
-    image: "/images/awards/june2023.svg",
+    image: `${import.meta.env.BASE_URL}images/awards/june2023.svg`,
     verificationUrl:
       "https://www.linkedin.com/in/satishkush4446/overlay/Honor/1117226708/treasury/?profileId=ACoAAD3x4PoBktH6E5jQGg2uVc2nIIMrBqxG098",
     associatedExperience: "Adaan Digital Solutions • Junior Web Designer",
@@ -42,7 +42,7 @@ export const awardsData = [
       "Introduced automated front-end build tools that reduced build times by 20%",
       "Maintained a 95% client satisfaction score across international accounts"
     ],
-    image: "/images/awards/April_2023.svg",
+    image: `${import.meta.env.BASE_URL}images/awards/April_2023.svg`,
     verificationUrl:
       "https://www.linkedin.com/in/satishkush4446/overlay/Honor/1117151373/treasury/?profileId=ACoAAD3x4PoBktH6E5jQGg2uVc2nIIMrBqxG098",
     associatedExperience: "Adaan Digital Solutions • Junior Web Designer",

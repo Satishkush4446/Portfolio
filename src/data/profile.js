@@ -8,7 +8,7 @@ export const profileData = {
   email: "satishkush4446@outlook.com",
   linkedin: "https://www.linkedin.com/in/satishkush4446",
   github: "https://github.com/Satishkush4446",
-  resumeUrl: "/Satish_Kushwaha_Resume.pdf",
+  resumeUrl: `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`,
   availability: "Open to High-Impact Opportunities",
   yearsOfExperience: "2+ Years",
   summary: 

@@ -236,7 +236,7 @@ export default function Hero() {
           </MagneticButton>
 
           <MagneticButton
-            href={profileData.resumeUrl || '/Satish_Kushwaha_Resume.pdf'}
+            href={profileData.resumeUrl || `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`}
             download="Satish_Kushwaha_Resume.pdf"
             variant="secondary"
             aria-label="Download Satish Kushwaha Resume (PDF)"

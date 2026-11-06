@@ -103,7 +103,7 @@ export default function Navbar() {
 
             {/* Resume Download Action */}
             <a
-              href={profileData.resumeUrl || '/Satish_Kushwaha_Resume.pdf'}
+              href={profileData.resumeUrl || `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`}
               download="Satish_Kushwaha_Resume.pdf"
               className="highlight-icon-box nav-resume-btn"
               style={{ width: '38px', height: '38px', borderRadius: '50%' }}
@@ -181,7 +181,7 @@ export default function Navbar() {
 
           {/* Mobile Resume Action */}
           <a
-            href={profileData.resumeUrl || '/Satish_Kushwaha_Resume.pdf'}
+            href={profileData.resumeUrl || `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`}
             download="Satish_Kushwaha_Resume.pdf"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-primary)', fontSize: '0.9rem', fontWeight: 600 }}
             onClick={closeMobileMenu}
