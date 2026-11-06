@@ -1,0 +1,398 @@
+/* ==========================================================================
+   AWARDS & RECOGNITION EXHIBITION STYLING
+   Satish Kushwaha — Award-Winning Portfolio
+   ========================================================================== */
+
+.awards-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.awards-counter-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(199, 255, 77, 0.12);
+}
+
+.awards-counter-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent-primary);
+  letter-spacing: -0.03em;
+}
+
+.awards-counter-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.awards-counter-title {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.awards-counter-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Awards Exhibition Grid */
+.awards-exhibition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Award Card */
+.award-exhibit-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s var(--ease-out-expo),
+              border-color 0.4s var(--ease-out-expo),
+              box-shadow 0.4s var(--ease-out-expo);
+}
+
+.award-exhibit-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-border);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(199, 255, 77, 0.12);
+}
+
+/* Certificate Preview Container */
+.award-visual-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  background: #0d0d10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+}
+
+.award-visual-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1.25rem;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.award-exhibit-card:hover .award-visual-image {
+  transform: scale(1.03);
+}
+
+.award-visual-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.45);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-family: var(--font-headline);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.award-visual-frame:hover .award-visual-overlay {
+  opacity: 1;
+}
+
+/* Award Content Body */
+.award-card-body {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.award-card-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.award-number-badge {
+  font-family: var(--font-headline);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+}
+
+.award-month-pill {
+  font-family: var(--font-headline);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(199, 255, 77, 0.08);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-primary);
+}
+
+.award-title-text {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.award-subtitle-text {
+  font-family: var(--font-headline);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.award-issuer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.35rem;
+  font-size: 0.86rem;
+}
+
+.award-issuer-row strong {
+  color: var(--text-primary);
+}
+
+.award-issuer-row span {
+  color: var(--text-muted);
+}
+
+.award-description-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.award-actions-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  gap: 1rem;
+}
+
+.award-btn-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-headline);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  transition: transform var(--transition-fast);
+}
+
+.award-btn-preview:hover {
+  transform: translateX(4px);
+}
+
+.award-btn-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-headline);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.award-btn-verify:hover {
+  border-color: #60A5FA;
+  color: #60A5FA;
+  background: rgba(96, 165, 250, 0.08);
+}
+
+/* Experience Connect Banner */
+.awards-experience-bridge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(199, 255, 77, 0.04) 100%);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-xl);
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.awards-bridge-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.awards-bridge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.awards-bridge-content h4 {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.awards-bridge-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Award Lightbox Modal */
+.award-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-out-expo);
+}
+
+.award-lightbox-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.award-lightbox-dialog {
+  background: #111114;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 900px;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(199, 255, 77, 0.15);
+  transform: scale(0.96) translateY(20px);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.award-lightbox-overlay.open .award-lightbox-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.award-lightbox-image-wrap {
+  width: 100%;
+  background: #09090b;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.award-lightbox-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.award-lightbox-body {
+  padding: 2.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .awards-exhibition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .awards-experience-bridge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .award-card-body {
+    padding: 1.5rem;
+  }
+
+  .award-lightbox-body {
+    padding: 1.5rem;
+  }
+
+  .award-lightbox-image-wrap {
+    padding: 1rem;
+  }
+}

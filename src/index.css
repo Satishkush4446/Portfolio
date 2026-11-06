@@ -1,0 +1,6 @@
+/* Import modular Vanilla CSS architecture */
+@import './styles/global.css';
+@import './styles/animations.css';
+@import './styles/components.css';
+@import './styles/awards.css';
+@import './styles/responsive.css';
