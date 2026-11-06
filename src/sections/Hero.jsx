@@ -70,6 +70,10 @@ export default function Hero() {
 
       ctx.clearRect(0, 0, width, height);
 
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const particleRgb = isLight ? '22, 163, 74' : '199, 255, 77';
+      const lineAlphaMult = isLight ? 0.22 : 0.12;
+
       // Connect nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
@@ -79,7 +83,7 @@ export default function Hero() {
 
           if (dist < 110) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(199, 255, 77, ${0.12 * (1 - dist / 110)})`;
+            ctx.strokeStyle = `rgba(${particleRgb}, ${lineAlphaMult * (1 - dist / 110)})`;
             ctx.lineWidth = 0.6;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -111,7 +115,7 @@ export default function Hero() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(199, 255, 77, ${p.alpha})`;
+        ctx.fillStyle = `rgba(${particleRgb}, ${p.alpha * (isLight ? 1.4 : 1)})`;
         ctx.fill();
       });
 
