@@ -51,6 +51,16 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
           className="modal-header-banner"
           style={{ background: project.coverGradient }}
         >
+          {project.image && (
+            <img
+              src={project.image}
+              alt={`${project.title} live preview backdrop`}
+              className="modal-header-preview-img"
+              loading="lazy"
+            />
+          )}
+          <div className="modal-header-overlay" />
+
           <button
             type="button"
             className="modal-close-btn"

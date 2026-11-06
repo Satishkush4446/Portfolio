@@ -114,7 +114,17 @@ export default function Projects() {
                 <div
                   className="project-card-header-bg"
                   style={{ background: project.coverGradient }}
-                />
+                >
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={`${project.title} live preview`}
+                      className="project-card-preview-img"
+                      loading="lazy"
+                    />
+                  )}
+                  <div className="project-card-header-overlay" />
+                </div>
 
                 <div className="project-header-top">
                   <span

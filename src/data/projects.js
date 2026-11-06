@@ -35,6 +35,7 @@ export const projectsData = [
     techStack: ["WordPress", "Gutenberg Editor", "Blocksy Theme", "Stackable Blocks", "HTML5", "CSS3", "Technical SEO", "Responsive Design"],
     coverGradient: "linear-gradient(135deg, #064e3b 0%, #022c22 100%)",
     accentColor: "#34D399",
+    image: `${import.meta.env.BASE_URL}images/projects/dharti-maa.jpg`,
     liveDemo: "https://dhartimaa.org/",
     githubRepo: "https://github.com/Satishkush4446/dharti-maa-trust",
     representativeWebsites: null
@@ -77,6 +78,7 @@ export const projectsData = [
     techStack: ["WordPress", "Elementor", "HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "WP Rocket", "Hostinger CDN", "Swiper Slider", "Core Web Vitals", "SEO"],
     coverGradient: "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)",
     accentColor: "#60A5FA",
+    image: `${import.meta.env.BASE_URL}images/projects/spectra-testing-labs.jpg`,
     liveDemo: "https://spectratestinglabs.com/",
     githubRepo: "https://github.com/Satishkush4446/spectra-testing-labs",
     representativeWebsites: null
@@ -121,6 +123,7 @@ export const projectsData = [
     techStack: ["WordPress", "Elementor", "WooCommerce", "HTML5", "CSS3", "JavaScript", "PHP", "Hostinger CDN", "Google Site Kit", "Trustindex", "HTTP/3", "Technical SEO"],
     coverGradient: "linear-gradient(135deg, #451a03 0%, #1c1917 100%)",
     accentColor: "#FBBF24",
+    image: `${import.meta.env.BASE_URL}images/projects/swachhand-academy.jpg`,
     liveDemo: "https://swachhandias.com/",
     githubRepo: "https://github.com/Satishkush4446/swachhand-academy",
     representativeWebsites: null
@@ -177,6 +180,7 @@ export const projectsData = [
     techStack: ["WordPress", "Duda", "Wix", "Squarespace", "Elementor", "HTML5", "CSS3", "JavaScript", "DNS Cutover", "Technical SEO", "Core Web Vitals"],
     coverGradient: "linear-gradient(135deg, #18181b 0%, #09090b 100%)",
     accentColor: "#C7FF4D",
+    image: `${import.meta.env.BASE_URL}images/projects/website-migrations.jpg`,
     liveDemo: "https://greenbat-france.fr/",
     secondaryLiveDemo: "https://www.wellbeingbeauty.com.au/",
     liveDemoLabel: "Live Preview: Green Bat France",
