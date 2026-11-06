@@ -28,5 +28,25 @@ describe('Navbar Component', () => {
 
     fireEvent.click(toggleBtn);
     expect(screen.getByLabelText('Close Menu')).toBeInTheDocument();
+
+    // Closing on Escape key
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.getByLabelText('Open Menu')).toBeInTheDocument();
+  });
+
+  it('closes mobile drawer when a mobile nav link is clicked', () => {
+    render(<Navbar />);
+
+    const openBtn = screen.getByLabelText('Open Menu');
+    fireEvent.click(openBtn);
+    expect(screen.getByLabelText('Close Menu')).toBeInTheDocument();
+
+    const mobileProjectLink = screen.getAllByRole('link', { name: 'Projects' }).find((link) =>
+      link.classList.contains('mobile-nav-item')
+    );
+    expect(mobileProjectLink).toBeInTheDocument();
+
+    fireEvent.click(mobileProjectLink);
+    expect(screen.getByLabelText('Open Menu')).toBeInTheDocument();
   });
 });

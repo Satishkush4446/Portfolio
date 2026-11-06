@@ -13,11 +13,24 @@
 /* Tablets landscape and smaller laptops (<= 1200px) */
 @media (max-width: 1200px) {
   .nav-links {
-    gap: 1.25rem;
+    gap: clamp(0.75rem, 1.2vw, 1.15rem);
   }
 
   .nav-link {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  /* Compact status dot to icon ping to conserve horizontal space */
+  .nav-status-text {
+    display: none;
+  }
+
+  .nav-status-dot {
+    padding: 0.38rem 0.5rem;
   }
 }
 
@@ -28,7 +41,15 @@
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
+  }
+
+  .navbar-inner {
+    padding: 0.55rem 1rem 0.55rem 1.25rem;
+  }
+
+  .nav-brand {
+    font-size: 1.05rem;
   }
 
   .about-grid {
@@ -52,6 +73,13 @@
   }
 }
 
+/* Medium Tablets & Narrow Viewports (<= 860px) */
+@media (max-width: 860px) {
+  .nav-github-btn {
+    display: none;
+  }
+}
+
 /* Mobile landscape and standard tablets (<= 768px) */
 @media (max-width: 768px) {
   :root {
@@ -68,11 +96,48 @@
   }
 
   .navbar-wrapper {
-    top: 0.75rem;
+    top: max(0.65rem, env(safe-area-inset-top));
+    padding: 0 max(0.75rem, env(safe-area-inset-left));
   }
 
   .navbar-inner {
-    padding: 0.5rem 0.85rem;
+    padding: 0.45rem 0.75rem 0.45rem 0.95rem;
+    border-radius: var(--radius-full);
+  }
+
+  .nav-brand {
+    font-size: 1rem;
+    gap: 0.55rem;
+  }
+
+  .brand-glyph {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+    border-radius: 6px;
+  }
+
+  .nav-actions {
+    gap: 0.45rem;
+  }
+
+  .nav-status-dot {
+    display: none;
+  }
+
+  .nav-github-btn {
+    display: none;
+  }
+
+  .nav-contact-btn {
+    padding: 0.42rem 0.85rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .mobile-toggle {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0.35rem;
   }
 
   .hero-section {
@@ -194,6 +259,45 @@
 
 /* Standard Mobile (<= 480px) */
 @media (max-width: 480px) {
+  .navbar-wrapper {
+    top: max(0.5rem, env(safe-area-inset-top));
+    padding: 0 max(0.5rem, env(safe-area-inset-left));
+  }
+
+  .navbar-inner {
+    padding: 0.38rem 0.55rem 0.38rem 0.75rem;
+  }
+
+  .nav-brand {
+    font-size: 0.92rem;
+    gap: 0.45rem;
+  }
+
+  .brand-glyph {
+    width: 26px;
+    height: 26px;
+    font-size: 0.72rem;
+  }
+
+  .nav-actions {
+    gap: 0.35rem;
+  }
+
+  .nav-resume-btn {
+    display: none;
+  }
+
+  .nav-contact-btn {
+    padding: 0.36rem 0.7rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .mobile-toggle {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0.3rem;
+  }
+
   .hero-name {
     font-size: clamp(2.15rem, 11vw, 2.75rem);
     line-height: 1.1;
@@ -265,6 +369,37 @@
 @media (max-width: 360px) {
   :root {
     --container-padding: 0.85rem;
+  }
+
+  .navbar-wrapper {
+    top: max(0.35rem, env(safe-area-inset-top));
+    padding: 0 max(0.35rem, env(safe-area-inset-left));
+  }
+
+  .navbar-inner {
+    padding: 0.32rem 0.45rem 0.32rem 0.6rem;
+  }
+
+  .nav-brand {
+    font-size: 0.85rem;
+    gap: 0.35rem;
+  }
+
+  .brand-glyph {
+    width: 24px;
+    height: 24px;
+    font-size: 0.68rem;
+  }
+
+  /* On ultra-compact screens, hide contact button in pill navbar; available inside drawer */
+  .nav-contact-btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    min-width: 34px;
+    min-height: 34px;
+    padding: 0.25rem;
   }
 
   .hero-name {

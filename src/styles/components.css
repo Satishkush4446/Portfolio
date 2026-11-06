@@ -135,11 +135,29 @@
 
 .mobile-toggle {
   display: none;
-  background: transparent;
-  border: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
   color: var(--text-primary);
   cursor: pointer;
   padding: 0.5rem;
+  min-width: 42px;
+  min-height: 42px;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.mobile-toggle:hover {
+  background: rgba(199, 255, 77, 0.12);
+  border-color: var(--accent-border);
+  color: var(--accent-primary);
+  transform: scale(1.04);
+}
+
+.mobile-toggle:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }
 
 /* Mobile Menu Drawer */
@@ -149,15 +167,20 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(8, 8, 8, 0.96);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  height: 100dvh;
+  min-height: 100vh;
+  background: rgba(8, 8, 8, 0.97);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   z-index: calc(var(--z-nav) - 1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: calc(env(safe-area-inset-top) + 5.5rem) 1.5rem calc(env(safe-area-inset-bottom) + 2.5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s var(--ease-out-expo);
@@ -173,21 +196,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.75rem;
-  margin-bottom: 2.5rem;
+  gap: clamp(0.9rem, 2.5vh, 1.75rem);
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .mobile-nav-item {
   font-family: var(--font-headline);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 5vw, 2.1rem);
   font-weight: 700;
   color: var(--text-secondary);
   transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+  letter-spacing: -0.01em;
 }
 
-.mobile-nav-item:hover {
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
   color: var(--accent-primary);
-  transform: translateX(8px);
+  transform: translateX(6px);
 }
 
 /* --------------------------------------------------------------------------

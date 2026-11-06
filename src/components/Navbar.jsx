@@ -98,14 +98,14 @@ export default function Navbar() {
           <div className="nav-actions">
             <div className="nav-status-dot" title="Available for Frontend Opportunities">
               <span className="live-ping" />
-              <span>Available</span>
+              <span className="nav-status-text">Available</span>
             </div>
 
             {/* Resume Download Action */}
             <a
               href={profileData.resumeUrl || '/Satish_Kushwaha_Resume.pdf'}
               download="Satish_Kushwaha_Resume.pdf"
-              className="highlight-icon-box"
+              className="highlight-icon-box nav-resume-btn"
               style={{ width: '38px', height: '38px', borderRadius: '50%' }}
               aria-label="Download Satish Kushwaha Resume"
               title="Download Resume (PDF)"
@@ -118,7 +118,7 @@ export default function Navbar() {
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="highlight-icon-box"
+              className="highlight-icon-box nav-github-btn"
               style={{ width: '38px', height: '38px', borderRadius: '50%' }}
               aria-label="GitHub Profile"
               title="GitHub Profile"
@@ -160,7 +160,7 @@ export default function Navbar() {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="mobile-nav-item"
+                className={`mobile-nav-item ${activeSection === item.href.slice(1) ? 'active' : ''}`}
                 onClick={closeMobileMenu}
               >
                 {item.label}
