@@ -35,7 +35,7 @@ export const projectsData = [
     techStack: ["WordPress", "Gutenberg Editor", "Blocksy Theme", "Stackable Blocks", "HTML5", "CSS3", "Technical SEO", "Responsive Design"],
     coverGradient: "linear-gradient(135deg, #064e3b 0%, #022c22 100%)",
     accentColor: "#34D399",
-    liveDemo: "https://dhartimaatrust.org",
+    liveDemo: "https://dhartimaa.org/",
     githubRepo: "https://github.com/Satishkush4446/dharti-maa-trust",
     representativeWebsites: null
   },
@@ -77,7 +77,7 @@ export const projectsData = [
     techStack: ["WordPress", "Elementor", "HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "WP Rocket", "Hostinger CDN", "Swiper Slider", "Core Web Vitals", "SEO"],
     coverGradient: "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)",
     accentColor: "#60A5FA",
-    liveDemo: "https://spectralab.in",
+    liveDemo: "https://spectratestinglabs.com/",
     githubRepo: "https://github.com/Satishkush4446/spectra-testing-labs",
     representativeWebsites: null
   },
@@ -121,7 +121,7 @@ export const projectsData = [
     techStack: ["WordPress", "Elementor", "WooCommerce", "HTML5", "CSS3", "JavaScript", "PHP", "Hostinger CDN", "Google Site Kit", "Trustindex", "HTTP/3", "Technical SEO"],
     coverGradient: "linear-gradient(135deg, #451a03 0%, #1c1917 100%)",
     accentColor: "#FBBF24",
-    liveDemo: "https://swachhandacademy.com",
+    liveDemo: "https://swachhandias.com/",
     githubRepo: "https://github.com/Satishkush4446/swachhand-academy",
     representativeWebsites: null
   },
