@@ -40,7 +40,7 @@ describe('Projects Section & Modal', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
-  it('does not render broken live demo link for Project 4 (migrations study)', () => {
+  it('renders verified representative live preview links for Project 4 (migrations study)', () => {
     render(<Projects />);
 
     const migrationsCard = screen.getByLabelText(/View case study for 50\+ Website Migrations/i);
@@ -48,9 +48,10 @@ describe('Projects Section & Modal', () => {
 
     // Verify dialog opened
     expect(screen.getByRole('dialog')).toBeInTheDocument();
-    // Verify it does NOT render broken live website link
-    const brokenLink = screen.queryByRole('link', { name: /Visit Live Website/i });
-    expect(brokenLink).toBeNull();
+    
+    // Verify representative live preview links
+    expect(screen.getByRole('link', { name: /Live Preview: Green Bat France/i })).toHaveAttribute('href', 'https://greenbat-france.fr/');
+    expect(screen.getByRole('link', { name: /Live Preview: Wellbeing Beauty/i })).toHaveAttribute('href', 'https://www.wellbeingbeauty.com.au/');
 
     // Verify aggregate study badge is displayed
     expect(screen.getByText(/Multi-Site Enterprise Study/i)).toBeInTheDocument();

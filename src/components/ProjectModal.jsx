@@ -115,7 +115,20 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
                   className="magnetic-btn magnetic-btn-primary"
                   style={{ padding: '0.5rem 1.15rem', fontSize: '0.84rem' }}
                 >
-                  <span>Visit Live Website</span>
+                  <span>{project.liveDemoLabel || 'Visit Live Website'}</span>
+                  <ExternalLink size={14} />
+                </a>
+              )}
+
+              {project.secondaryLiveDemo && (
+                <a
+                  href={project.secondaryLiveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="magnetic-btn magnetic-btn-primary"
+                  style={{ padding: '0.5rem 1.15rem', fontSize: '0.84rem' }}
+                >
+                  <span>{project.secondaryLiveDemoLabel || 'Visit Live Website'}</span>
                   <ExternalLink size={14} />
                 </a>
               )}
@@ -278,7 +291,7 @@ export default function ProjectModal({ project, isOpen, onClose, onSelectProject
                       {site.type}
                     </span>
                     <a
-                      href={`https://${site.domain}`}
+                      href={site.url || `https://${site.domain}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ fontSize: '0.75rem', color: '#60A5FA', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.2rem' }}

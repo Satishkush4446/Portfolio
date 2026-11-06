@@ -139,17 +139,18 @@ export const projectsData = [
     secondaryMetric: "35% Speed Lift",
     tagline: "End-to-end migration and redesign across 50+ business websites transitioning legacy stacks into high-performance WordPress & Duda.",
     description: 
-      "Led end-to-end migration and redesign work across more than 50 business websites, transitioning legacy platforms and custom stacks into modern CMS solutions, including WordPress and Duda. Delivered responsive UI/UX improvements, content migrations, technical SEO enhancements, and performance optimizations.",
+      "Led the end-to-end migration and redesign of 50+ business websites from platforms such as Wix, Squarespace, and custom-built solutions to modern CMS platforms, including WordPress and Duda.",
     challenges: 
       "Migrating legacy platforms fraught with outdated plugins, bloated code, missing mobile responsiveness, and high SEO risk during domain and DNS transitions across diverse international clients.",
     solutions: 
       "Formulated rigorous zero-downtime migration protocols: database schema mapping, custom plugin replacements, responsive UI rebuilds, asset optimization, automated DNS propagation monitoring, and 301 redirect mapping.",
     keyContributions: [
-      "Led migration and redesign of 50+ client websites from legacy platforms to WordPress (Elementor), Duda, and Wix",
-      "Reduced average page-load times by 35% and improved Core Web Vitals from 'Needs Improvement' to 'Good' across devices",
-      "Guaranteed 0% downtime and full preservation of existing organic search ranking equity",
-      "Optimized SEO architecture and conversion funnels, increasing organic traffic by 25% and lead conversions by 18%",
-      "Engineered mobile-first UI redesigns for over 200,000 monthly visitors across global timezones"
+      "Spearheaded responsive UI/UX redesigns, delivering modern, user-friendly, and mobile-first website experiences",
+      "Developed custom WordPress themes, reusable components, dynamic widgets, and scalable content management workflows",
+      "Executed seamless website migrations with zero downtime, ensuring data integrity and minimal business disruption",
+      "Optimized website performance and Core Web Vitals, achieving up to 35% faster load times, 25% growth in organic traffic, and an 18% increase in conversion rates",
+      "Ensured cross-browser and cross-device compatibility, accessibility, and SEO-friendly implementation",
+      "Mentored junior developers and collaborated with designers, SEO specialists, and project managers to deliver projects within tight deadlines"
     ],
     verifiedResults: {
       sites: "50+ Websites Migrated or Redesigned",
@@ -159,24 +160,27 @@ export const projectsData = [
       downtime: "Zero Downtime During All Migrations"
     },
     representativeWebsites: [
-      { domain: "mconceptbtp.fr", name: "Mconcept BTP", type: "French Construction Firm", region: "France" },
-      { domain: "therxnutrition.co.uk", name: "The Rx Nutrition", type: "UK Wellness Brand", region: "United Kingdom" },
-      { domain: "asi-services.co.uk", name: "ASI Services", type: "B2B Service Company", region: "United Kingdom" },
-      { domain: "greenbat-france.fr", name: "Green Bat France", type: "Environmental Solutions", region: "France" },
-      { domain: "silverv.com", name: "SilverV", type: "Technology Product Company", region: "Global" },
-      { domain: "wellbeingbeauty.com.au", name: "Wellbeing Beauty", type: "Australian E-Commerce", region: "Australia" },
-      { domain: "bvdmedstaffing.com", name: "BVD Med Staffing", type: "US Staffing Agency", region: "United States" }
+      { domain: "greenbat-france.fr", url: "https://greenbat-france.fr/", name: "Green Bat France", type: "Environmental Solutions", region: "France" },
+      { domain: "wellbeingbeauty.com.au", url: "https://www.wellbeingbeauty.com.au/", name: "Wellbeing Beauty", type: "Australian E-Commerce", region: "Australia" },
+      { domain: "mconceptbtp.fr", url: "https://mconceptbtp.fr", name: "Mconcept BTP", type: "French Construction Firm", region: "France" },
+      { domain: "therxnutrition.co.uk", url: "https://therxnutrition.co.uk", name: "The Rx Nutrition", type: "UK Wellness Brand", region: "United Kingdom" },
+      { domain: "asi-services.co.uk", url: "https://asi-services.co.uk", name: "ASI Services", type: "B2B Service Company", region: "United Kingdom" },
+      { domain: "silverv.com", url: "https://silverv.com", name: "SilverV", type: "Technology Product Company", region: "Global" },
+      { domain: "bvdmedstaffing.com", url: "https://bvdmedstaffing.com", name: "BVD Med Staffing", type: "US Staffing Agency", region: "United States" }
     ],
     outcomes: [
-      "Migrated and redesigned 50+ production business platforms across UK, France, Australia, and US",
+      "Migrated and redesigned 50+ production business platforms from Wix, Squarespace, and custom stacks to modern WordPress and Duda",
       "Achieved 100% zero-downtime DNS cutover with zero lost search engine rankings",
-      "Delivered aggregate 35% faster average page loads and 18% improvement in customer conversion funnels",
-      "Earned 2× 'Star of the Month' honors at Adaan Digital Solutions for engineering velocity"
+      "Delivered up to 35% faster average page loads and 18% improvement in customer conversion funnels",
+      "Demonstrated proven expertise in delivering scalable, high-performance, SEO-friendly websites that enhance user experience and generate measurable business results"
     ],
     techStack: ["WordPress", "Duda", "Wix", "Squarespace", "Elementor", "HTML5", "CSS3", "JavaScript", "DNS Cutover", "Technical SEO", "Core Web Vitals"],
     coverGradient: "linear-gradient(135deg, #18181b 0%, #09090b 100%)",
     accentColor: "#C7FF4D",
-    liveDemo: null,
+    liveDemo: "https://greenbat-france.fr/",
+    secondaryLiveDemo: "https://www.wellbeingbeauty.com.au/",
+    liveDemoLabel: "Live Preview: Green Bat France",
+    secondaryLiveDemoLabel: "Live Preview: Wellbeing Beauty",
     isAggregateCaseStudy: true,
     githubRepo: "https://github.com/Satishkush4446/50-website-migrations",
     isPlaceholder: false
