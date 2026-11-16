@@ -63,8 +63,8 @@ export default function Skills() {
 
   // Assign bento grid spans based on category
   const getBentoSpan = (id) => {
-    if (id === 'frontend') return 'bento-col-8';
-    if (id === 'cms') return 'bento-col-4';
+    if (id === 'frontend') return 'bento-col-6';
+    if (id === 'cms') return 'bento-col-6';
     if (id === 'performance-seo' || id === 'specializations') return 'bento-col-6';
     if (id === 'ui-ux-design' || id === 'design') return 'bento-col-6';
     if (id === 'tools') return 'bento-col-12';
