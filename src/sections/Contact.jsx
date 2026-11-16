@@ -51,7 +51,7 @@ export default function Contact() {
     if (!accessKey || accessKey === 'your_web3forms_access_key_here') {
       setSubmitStatus('error');
       setFeedbackMessage(
-        'Delivery setup notice: VITE_WEB3FORMS_ACCESS_KEY is not configured yet. Please email me directly at satishkush4446@outlook.com or click "Send Direct Email" above.'
+        `Delivery setup notice: VITE_WEB3FORMS_ACCESS_KEY is not configured yet. Please email me directly at ${profileData.email} or click "Send Direct Email" above.`
       );
       return;
     }
@@ -100,7 +100,7 @@ export default function Contact() {
       }
     } catch {
       setSubmitStatus('error');
-      setFeedbackMessage('Network request failed. Please verify your connection or email directly at satishkush4446@outlook.com.');
+      setFeedbackMessage(`Network request failed. Please verify your connection or email directly at ${profileData.email}.`);
     } finally {
       setSubmitting(false);
     }

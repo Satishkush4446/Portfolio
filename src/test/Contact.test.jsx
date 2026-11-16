@@ -11,7 +11,7 @@ describe('Contact Section & Form', () => {
     render(<Contact />);
 
     expect(screen.getByText('Send Direct Email')).toBeInTheDocument();
-    expect(screen.getByText(/satishkush4446@outlook.com/i)).toBeInTheDocument();
+    expect(screen.getByText(/satishkush4446@gmail.com/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Your Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Your Email/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Message \/ Project Details/i)).toBeInTheDocument();

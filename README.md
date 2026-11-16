@@ -66,4 +66,4 @@ npm test         # Run Vitest component and unit test suite
 - **Satish Kushwaha**
 - **GitHub:** [@Satishkush4446](https://github.com/Satishkush4446)
 - **LinkedIn:** [Satish Kushwaha](https://www.linkedin.com/in/satish-kushwaha-4446-/)
-- **Email:** satishkush4446@outlook.com
+- **Email:** satishkush4446@gmail.com

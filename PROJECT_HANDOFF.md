@@ -212,7 +212,7 @@ Portfolio/
 ## 6. Important Files & Code Responsibilities
 
 1. **`src/data/profile.js`**
-   - Central authority for Satish Kushwaha's headline, biography, location (`Faridabad, Haryana, India`), email (`satishkush4446@outlook.com`), LinkedIn, GitHub (`https://github.com/Satishkush4446`), 6 quantitative metrics, experience history, education, and honors.
+   - Central authority for Satish Kushwaha's headline, biography, location (`Faridabad, Haryana, India`), email (`satishkush4446@gmail.com`), LinkedIn, GitHub (`https://github.com/Satishkush4446`), 6 quantitative metrics, experience history, education, and honors.
 2. **`src/data/projects.js`**
    - Contains 4 production case studies:
      1. *Dharti Maa Trust* (Nonprofit / NGO, WordPress, Blocksy Theme, Gutenberg, WCAG).

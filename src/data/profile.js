@@ -6,7 +6,7 @@ export const profileData = {
   bio: "I create ultra-fast, accessible, interactive, and visually engaging digital experiences that blend engineering precision with artistic motion.",
   location: "Faridabad, Haryana, India",
   phone: "+91 92679 11613",
-  email: "satishkush4446@outlook.com",
+  email: "satishkush4446@gmail.com",
   linkedin: "https://www.linkedin.com/in/satishkush4446",
   github: "https://github.com/Satishkush4446",
   resumeUrl: `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`,
