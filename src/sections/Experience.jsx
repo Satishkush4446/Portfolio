@@ -69,9 +69,16 @@ export default function Experience() {
                   </div>
 
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.4rem' }}>
-                    <span className="timeline-duration-badge">
+                    <span
+                      className="timeline-duration-badge"
+                      style={exp.isCurrent ? {
+                        borderColor: 'var(--accent-primary)',
+                        color: 'var(--accent-primary)',
+                        background: 'var(--accent-dim)'
+                      } : {}}
+                    >
                       <Calendar size={13} style={{ display: 'inline', marginRight: '4px' }} />
-                      {exp.period} ({exp.duration})
+                      {exp.period} {exp.duration ? `(${exp.duration})` : ''}
                     </span>
                     <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                       <MapPin size={12} />
@@ -84,36 +91,38 @@ export default function Experience() {
                   {exp.description}
                 </p>
 
-                {/* Subtle Recognition Indicator linked to Awards Section */}
-                <a
-                  href="#awards"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: '0.75rem',
-                    padding: '0.85rem 1.25rem',
-                    background: 'var(--accent-dim)',
-                    border: '1px solid var(--accent-border)',
-                    borderRadius: 'var(--radius-md)',
-                    marginBottom: '1.5rem',
-                    textDecoration: 'none',
-                    transition: 'all 0.25s ease'
-                  }}
-                  className="experience-awards-link"
-                  title="View full honors exhibition"
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <Award size={20} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 600 }}>
-                      2× Star of the Month — April &amp; June 2023
+                {/* Recognition Indicator linked to Awards Section */}
+                {exp.hasAwards && (
+                  <a
+                    href="#awards"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: '0.75rem',
+                      padding: '0.85rem 1.25rem',
+                      background: 'var(--accent-dim)',
+                      border: '1px solid var(--accent-border)',
+                      borderRadius: 'var(--radius-md)',
+                      marginBottom: '1.5rem',
+                      textDecoration: 'none',
+                      transition: 'all 0.25s ease'
+                    }}
+                    className="experience-awards-link"
+                    title="View full honors exhibition"
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                      <Award size={20} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
+                      <span style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+                        {exp.awardsText || '2× Star of the Month — April & June 2023'}
+                      </span>
+                    </div>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', fontFamily: 'var(--font-headline)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+                      <span>View Honors</span>
+                      <span>→</span>
                     </span>
-                  </div>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', fontFamily: 'var(--font-headline)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-                    <span>View Honors</span>
-                    <span>→</span>
-                  </span>
-                </a>
+                  </a>
+                )}
 
                 {/* Key Verified Responsibilities & Achievements */}
                 <h4 style={{ fontFamily: 'var(--font-headline)', fontSize: '0.95rem', color: 'var(--text-primary)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>

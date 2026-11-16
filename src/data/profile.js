@@ -10,9 +10,9 @@ export const profileData = {
   github: "https://github.com/Satishkush4446",
   resumeUrl: `${import.meta.env.BASE_URL}Satish_Kushwaha_Resume.pdf`,
   availability: "Open to High-Impact Opportunities",
-  yearsOfExperience: "2+ Years",
+  yearsOfExperience: "3+ Years",
   summary: 
-    "As a UI/UX-focused frontend engineer, I have architected, redesigned, and migrated 100+ production websites across modern frontend frameworks and enterprise CMS platforms. At Adaan Digital Solutions, I reduced average page load times by 35%, championed Core Web Vitals to 'Good' across devices, and executed zero-downtime CMS migrations for high-traffic brands. My engineering toolkit bridges modern React, Vanilla JavaScript, CSS architecture, performance profiling, and design systems.",
+    "As a UI/UX-focused frontend engineer and WordPress developer with 3+ years of experience, I architect, modernize, and maintain high-performance digital platforms across modern frontend frameworks and enterprise CMS environments. Currently at Neo Verify, I develop and optimize production WordPress websites for AI/ML-driven fintech solutions. Previously at Adaan Digital Solutions, I reduced average page load times by 35% and executed zero-downtime CMS migrations for 50+ client websites. My engineering toolkit bridges modern React, Vanilla JavaScript, CSS architecture, Kinsta hosting, Core Web Vitals optimization, and design systems.",
   
   stats: [
     { value: 100, suffix: "+", label: "Websites Delivered", detail: "Engineered with speed, accessibility & responsive precision" },
@@ -25,11 +25,38 @@ export const profileData = {
 
   experience: [
     {
+      company: "Neo Verify",
+      role: "WordPress Developer",
+      employmentType: "Full-time",
+      period: "March 2024 – Present",
+      duration: "Present",
+      isCurrent: true,
+      location: "Faridabad, Haryana, India · Remote",
+      companyDescription: "US-based software company specializing in AI/ML-powered loan underwriting solutions",
+      description: "WordPress Developer at Neo Verify, a US-based software company specializing in AI/ML-powered loan underwriting solutions. Responsible for developing, maintaining, and optimizing WordPress websites, ensuring performance, security, reliability, and seamless user experiences.",
+      achievements: [
+        "WordPress Development: Build responsive WordPress websites from scratch, customize themes, develop new pages, and implement custom features using HTML, CSS, and JavaScript.",
+        "Website Maintenance: Manage WordPress core, theme, and plugin updates, troubleshoot compatibility issues, and ensure website stability and functionality.",
+        "Kinsta Hosting & Deployment: Manage Kinsta-hosted websites, staging environments, production deployments, backups, restoration, and website migrations.",
+        "Core Web Vitals Optimization: Improve LCP, INP, and CLS through caching, image compression, lazy loading, CSS/JS optimization, and Google PageSpeed Insights analysis.",
+        "Frontend Customization: Develop responsive layouts, implement custom code, and enhance website functionality, accessibility, and user experience.",
+        "Security & Monitoring: Monitor website uptime, perform security checks, troubleshoot technical issues, and maintain website reliability.",
+        "Technical SEO: Optimize meta tags, redirects, XML sitemaps, schema markup, and resolve technical SEO issues.",
+        "WooCommerce & Integrations: Manage WooCommerce functionality and integrate contact forms, analytics, tracking scripts, APIs, and third-party tools.",
+        "Content & Client Management: Create landing pages, update content and images, implement client-requested changes, and collaborate with stakeholders to deliver website improvements."
+      ],
+      skills: ["WordPress Development", "WordPress", "Kinsta Hosting", "Core Web Vitals", "Technical SEO", "WooCommerce", "JavaScript", "HTML5", "CSS3", "Staging & Deployments", "Website Security"]
+    },
+    {
       company: "Adaan Digital Solutions",
       role: "Junior Web Designer / Frontend Engineer",
+      employmentType: "Full-time",
       period: "December 2022 – March 2024",
       duration: "1 year 4 months",
+      isCurrent: false,
       location: "New Delhi, Delhi, India",
+      hasAwards: true,
+      awardsText: "2× Star of the Month — April & June 2023",
       description: "Spearheaded frontend engineering, high-volume website migrations, performance tuning, and accessible interface design for international enterprise clients.",
       achievements: [
         "Led migration and redesign of 50+ client websites from legacy platforms to WordPress (Elementor), Duda, and Wix — reducing average page-load times by 35% and improving Core Web Vitals scores from 'Needs Improvement' to 'Good' across all device viewports.",
